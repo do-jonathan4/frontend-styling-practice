@@ -35,7 +35,8 @@ const makeCommit = n => {
     })
 
     console.log(`submitted ${n} commits`)
-    console.log(`ignored ${skipDays} weekends`)
 }
 
-makeCommit(10)
+console.log(`ignored ${skipDays} weekends`)
+
+makeCommit(5)
