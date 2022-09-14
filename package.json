@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/do-jonathan4/github-bot#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "jsonfile": "^6.1.0",
     "moment": "^2.29.4",
     "random": "^3.0.6",
