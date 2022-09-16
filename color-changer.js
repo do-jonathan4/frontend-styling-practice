@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const hello = () => {
+const colorChanger = () => {
     const randomColor = Math.floor(Math.random()*16777215).toString(16)
     // make sure to contrast text
     const data = `body {
@@ -8,4 +8,5 @@ const hello = () => {
       }`
     fs.writeFile('styles.css', data, () => {})
 }
-hello()
+
+module.exports = colorChanger

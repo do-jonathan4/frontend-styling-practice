@@ -1,4 +1,5 @@
 const jsonfile = require('jsonfile')
+const colorChanger = require('./color-changer')
 const moment = require('moment')
 const simpleGit = require('simple-git')
 const random = require('random')
@@ -20,6 +21,7 @@ const makeCommit = n => {
     const data = {
         date: DATE
     }
+    colorChanger()
 
     // weekend check
     const weekend = new Date(DATE)
