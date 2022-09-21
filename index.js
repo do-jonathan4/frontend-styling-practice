@@ -4,6 +4,8 @@ const moment = require('moment')
 const simpleGit = require('simple-git')
 const random = require('random')
 const FILE_PATH = './data.json'
+const CSS_PATH = './styles.css'
+const fs = require('fs')
 let skipDays = 0
 
 const makeCommit = n => {
@@ -21,7 +23,7 @@ const makeCommit = n => {
     const data = {
         date: DATE
     }
-    colorChanger()
+    const colorData = colorChanger()
 
     // weekend check
     const weekend = new Date(DATE)
@@ -29,16 +31,24 @@ const makeCommit = n => {
         skipDays++
         DATE = null
     }
-
-    // edits files repeatedly; ignore
-    jsonfile.writeFile(FILE_PATH, data, () => {
-        simpleGit().add([FILE_PATH]).commit(DATE, {'--date': DATE},
+    fs.writeFile(CSS_PATH, colorData, () => {
+        simpleGit().add([CSS_PATH]).commit(DATE, {'--date': DATE},
         makeCommit.bind(this, --n))
     })
 
-    console.log(`submitted ${n} commits`)
+    // edits files repeatedly; ignore
+    // jsonfile.writeFile(FILE_PATH, data, () => {
+    //     simpleGit().add([FILE_PATH]).commit(DATE, {'--date': DATE},
+    //     makeCommit.bind(this, --n))
+    // })
+    
 }
 
-console.log(`ignored ${skipDays} weekends`)
+const com = (n) => {
+    makeCommit(n)
+    console.log(`submitted ${n} commits`)
+    console.log(`ignored ${skipDays} weekends`)
+}
 
-makeCommit(5)
+com(5)
+

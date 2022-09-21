@@ -6,7 +6,8 @@ const colorChanger = () => {
     const data = `body {
         background-color: #${randomColor};
       }`
-    fs.writeFile('styles.css', data, () => {})
+    // fs.writeFile('styles.css', data, () => {})
+    return data
 }
 
 module.exports = colorChanger
