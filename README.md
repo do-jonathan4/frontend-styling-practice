@@ -1,2 +1,3 @@
-# github-bot
-experimental repository to test some node packages
+# random-color-changer
+
+https://do-jonathan4.github.io/random-color-changer/
