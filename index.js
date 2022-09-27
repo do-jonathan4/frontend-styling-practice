@@ -23,13 +23,13 @@ const makeCommit = n => {
     const weekend = new Date(DATE)
     if(weekend.getDay() == 6 || weekend.getDay() == 0) {
         skipDays++
-        DATE = null
-    }
-
-    fs.writeFile(CSS_PATH, data, () => {
-        simpleGit().add([CSS_PATH]).commit(DATE, {'--date': DATE},
-        makeCommit.bind(this, --n))
-    })
+        makeCommit(n)
+    } else {
+        fs.writeFile(CSS_PATH, data, () => {
+            simpleGit().add([CSS_PATH]).commit(DATE, {'--date': DATE},
+            makeCommit.bind(this, --n))
+        })
+    }    
 }
 
 const dev = (n) => {
