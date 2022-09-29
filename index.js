@@ -2,7 +2,7 @@ const colorChanger = require('./color-changer')
 const moment = require('moment')
 const simpleGit = require('simple-git')
 const random = require('random')
-const CSS_PATH = './styles.css'
+const CSS_PATH = './css/styles.css'
 const fs = require('fs')
 let skipDays = 0
 
@@ -15,7 +15,6 @@ const makeCommit = n => {
     let DATE = moment()
         .subtract(1, 'y').add(1, 'd')
         // .subtract(2, 'M').add(1, 'd')
-        // change x only
         .add(x, 'w').add(y, 'd').format()
     const data = colorChanger()
 

@@ -1,0 +1,21 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 99vh;
+}
+
+.container {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.container > div {
+    width: 80%;
+}
