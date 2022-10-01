@@ -1,9 +1,10 @@
-const colorChanger = require('./color-changer')
+const fs = require('fs')
 const moment = require('moment')
 const simpleGit = require('simple-git')
 const random = require('random')
 const CSS_PATH = './css/styles.css'
-const fs = require('fs')
+const colorChanger = require('./color-changer')
+
 let skipDays = 0
 
 const makeCommit = n => {
