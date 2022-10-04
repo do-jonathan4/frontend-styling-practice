@@ -12,7 +12,7 @@ const date = n => {
     let [operator, number, period] = n.split('')
     
     operator = operator === '+' ? 'add' : 'subtract'
-    period = period === 'M' ? 'M' : 'y'
+    period = period.toUpperCase() === 'M' ? 'M' : 'y'
     number = Number(number)
     const weeks = period === 'M' ? 4*number : 52
     console.log({operator}, {number}, {period}, {weeks})
@@ -20,7 +20,7 @@ const date = n => {
     const x = random.int(0, weeks)
     const y = random.int(0, 6)
     let DATE = moment()
-        .add(number, period).add(1, 'd')
+        [operator](number, period).add(1, 'd')
         .add(x, 'w').add(y, 'd').format()
 
     const today = new Date(DATE);
