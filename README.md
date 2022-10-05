@@ -19,7 +19,6 @@ node index.js [[operator][number][time range]] [number of commits]
 amount of months of years <br/>
 
 `time range` <br/>
-
 `M` or `m` for month <br/>
 `y` for year <br/>
 
