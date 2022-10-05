@@ -2,13 +2,12 @@
 
 Just a totally normal (and fun) HTML, JS, CSS project. Nothing suspicious here.
 
-### [Live](https://do-jonathan4.github.io/random-color-changer/)
+## [Live](https://do-jonathan4.github.io/random-color-changer/)
 
 ## Instructions
 command line input
 ```
 node index.js [[operator][number][time range]] [number of commits]
-
 ```
 ### Parameters
 `operator` <br/>
